@@ -1,4 +1,4 @@
-module secret-dimension-hanzi
+module github.com/KercyLAN/secret-dimension-hanzi
 
 go 1.14
 
