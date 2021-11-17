@@ -1,12 +1,12 @@
 package hanzi
 
 import (
-	"github.com/KercyLAN/secret-dimension-core/str"
-	"github.com/KercyLAN/secret-dimension-pinyin/pinyin"
+	"github.com/kercylan98/go-pinyin/pinyin"
+	"github.com/kercylan98/klib/str"
 	"strings"
 )
 
-// 传入一串文本，转换为汉字信息
+// ToHanzi 传入一串文本，转换为汉字信息
 func ToHanzi(word string) *hanzi {
 	hz := &hanzi{
 		char:  word,
@@ -22,7 +22,7 @@ func ToHanzi(word string) *hanzi {
 	return hz
 }
 
-// 传入一段字符串,获取字符串中包含的所有词语
+// TakeWordsFull 传入一段字符串,获取字符串中包含的所有词语
 // todo 如果传入文字过长，效率较低，待优化
 func TakeWordsFull(content string) []*hanzi {
 	result := make([]*hanzi, 0)
@@ -61,7 +61,7 @@ func TakeWordsFull(content string) []*hanzi {
 	return end
 }
 
-// 押韵
+// Rhyme 押韵
 func Rhyme(word string, dir []*hanzi) []*hanzi {
 	hz := ToHanzi(word)
 	result := make([]*hanzi, 0)

@@ -1,7 +1,7 @@
 package hanzi
 
 import (
-	"github.com/KercyLAN/secret-dimension-pinyin/pinyin"
+	"github.com/kercylan98/go-pinyin/pinyin"
 )
 
 // 汉字结构
